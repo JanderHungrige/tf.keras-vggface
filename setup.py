@@ -13,7 +13,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'numpy>=1.9.1', 'scipy>=0.14', 'h5py', 'pillow', 'tensorflow>=1.15.3',
-        'six>=1.9.0', 'pyyaml','tensorboard >=1.15.3
+        'six>=1.9.0', 'pyyaml','tensorboard >=1.15.3'
     ],
     extras_require={
         "tf": ["tensorflow>=1.15.3"],
