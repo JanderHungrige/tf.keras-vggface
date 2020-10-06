@@ -7,7 +7,7 @@
 '''
 from __future__ import print_function
 
-from keras_vggface.modelsTF import RESNET50, VGG16, SENET50
+from keras_vggface_TF.modelsTF import RESNET50, VGG16, SENET50
 
 
 def VGGFace(include_top=True, model='vgg16', weights='vggface',
