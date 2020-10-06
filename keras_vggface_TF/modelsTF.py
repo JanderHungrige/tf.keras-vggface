@@ -16,7 +16,7 @@ from tensorflow.keras.layers import Flatten, Dense, Input, GlobalAveragePooling2
 from tensorflow.keras.utils import convert_all_kernels_in_model
 from tensorflow.keras.utils import get_file
 from tensorflow.keras import backend as K
-from keras_vggface import utils
+from keras_vggface_TF import utils
 from tensorflow.keras.utils import get_source_inputs
 import warnings
 from tensorflow.keras import Model
