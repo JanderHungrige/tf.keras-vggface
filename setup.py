@@ -12,10 +12,10 @@ setup(
     packages=find_packages(exclude=["tools", "training", "temp", "test", "data", "visualize","image",".venv",".github"]),
     zip_safe=False,
     install_requires=[
-        'numpy>=1.9.1', 'scipy>=0.14', 'h5py', 'pillow', 'tensorflow>=1.15.0',
-        'six>=1.9.0', 'pyyaml'
+        'numpy>=1.9.1', 'scipy>=0.14', 'h5py', 'pillow', 'tensorflow>=1.15.3',
+        'six>=1.9.0', 'pyyaml','tensorboard >=1.15.3
     ],
     extras_require={
-        "tf": ["tensorflow>=1.15.0"],
-        "tf_gpu": ["tensorflow-gpu>=1.15.0"],
+        "tf": ["tensorflow>=1.15.3"],
+        "tf_gpu": ["tensorflow-gpu>=1.15.3"],
     })
