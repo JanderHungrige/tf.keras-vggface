@@ -22,8 +22,8 @@ import warnings
 from tensorflow.keras import Model
 from tensorflow.keras import layers
 
-from keras_vggface.analyzeInput import _obtain_input_shape
-from keras_vggface.analyzeInput import convert_dense_weights_data_format
+from keras_vggface_TF.analyzeInput import _obtain_input_shape
+from keras_vggface_TF.analyzeInput import convert_dense_weights_data_format
 
 def VGG16(include_top=True, weights='vggface',
           input_tensor=None, input_shape=None,
