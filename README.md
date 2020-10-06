@@ -17,7 +17,6 @@ from keras_vggface_TF import utils
 ```
 
 If pretrained weigths are used, the weigths are automatically downloaded from rcmalli (links included in utils.py). 
-weight for quantisation aware training will be uploaded by me in time.
 
 ### example:
 ```
@@ -27,3 +26,6 @@ pretrained_model = VGGFace(model='resnet50', include_top=True, input_shape=(224,
 ### Recommened Libraries: 
 
 Tensorflow>=1.15.3
+
+### Future
+weights from quantisation aware training will be uploaded by me in time.
