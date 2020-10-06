@@ -7,7 +7,7 @@ setup(
     url='https://github.com/JanderHungrige/tf.keras-vggface',
     author='Jan Werth',
     author_email="werth.jan@gmail.com",
-    license='Apache 2.0',
+    license='MIT',
     keywords=['tf.keras', 'vggface', 'deeplearning'],
     packages=find_packages(exclude=["tools", "training", "temp", "test", "data", "visualize","image",".venv",".github"]),
     zip_safe=False,
