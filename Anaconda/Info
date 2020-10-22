@@ -1,0 +1,4 @@
+
+Clone this Annaconda enviroment via:
+
+conda env create -f KerasFaceENV.yml
