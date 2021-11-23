@@ -13,7 +13,6 @@ import tensorflow as tf
 from tensorflow.keras.layers import Flatten, Dense, Input, GlobalAveragePooling2D, \
     GlobalMaxPooling2D, Activation, Conv2D, MaxPooling2D, BatchNormalization, \
     AveragePooling2D, Reshape, Permute, multiply
-from tensorflow.keras.utils import convert_all_kernels_in_model
 from tensorflow.keras.utils import get_file
 from tensorflow.keras import backend as K
 from keras_vggface_TF import utils
@@ -117,8 +116,6 @@ def VGG16(include_top=True, weights='vggface',
                                     utils.VGG16_WEIGHTS_PATH_NO_TOP,
                                     cache_subdir=utils.VGGFACE_DIR)
         model.load_weights(weights_path, by_name=True)
-        if K.backend() == 'theano':
-            convert_all_kernels_in_model(model)
 
         if K.image_data_format() == 'channels_first':
             if include_top:
@@ -281,14 +278,6 @@ def RESNET50(include_top=True, weights='vggface',
                                     utils.RESNET50_WEIGHTS_PATH_NO_TOP,
                                     cache_subdir=utils.VGGFACE_DIR)
         model.load_weights(weights_path)
-        if K.backend() == 'theano':
-            layer_utils.convert_all_kernels_in_model(model)
-            if include_top:
-                maxpool = model.get_layer(name='avg_pool')
-                shape = maxpool.output_shape[1:]
-                dense = model.get_layer(name='classifier')
-                layer_utils.convert_dense_weights_data_format(dense, shape,
-                                                              'channels_first')
 
         if K.image_data_format() == 'channels_first' and K.backend() == 'tensorflow':
             warnings.warn('You are using the TensorFlow backend, yet you '
@@ -488,14 +477,6 @@ def SENET50(include_top=True, weights='vggface',
                                     utils.SENET50_WEIGHTS_PATH_NO_TOP,
                                     cache_subdir=utils.VGGFACE_DIR)
         model.load_weights(weights_path)
-        if K.backend() == 'theano':
-            layer_utils.convert_all_kernels_in_model(model)
-            if include_top:
-                maxpool = model.get_layer(name='avg_pool')
-                shape = maxpool.output_shape[1:]
-                dense = model.get_layer(name='classifier')
-                layer_utils.convert_dense_weights_data_format(dense, shape,
-                                                              'channels_first')
 
         if K.image_data_format() == 'channels_first' and K.backend() == 'tensorflow':
             warnings.warn('You are using the TensorFlow backend, yet you '

@@ -25,7 +25,7 @@ pretrained_model = VGGFace(model='resnet50', include_top=True, input_shape=(224,
 ```
 ### Recommened Libraries: 
 
-Tensorflow>=1.15.3
+Tensorflow>=2.0.0
 
 ### Future
 weights from quantisation aware training will be uploaded by me in time.
